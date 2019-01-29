@@ -44,8 +44,9 @@ routes.add(method: .get, uri: "/catalog") { request, responce in
     
     try! responce.setBody(json: responceCatalogData, skipContentType: true)
     responce.completed()
-    
 }
+
+
 routes.add(method: .post, uri: "/login") { request, responce in
     
     guard request.param(name: "username") != nil || request.param(name: "password") != nil else {
